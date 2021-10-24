@@ -58,7 +58,7 @@ export default class CheckGoogleAccounts {
 
             await this._page.waitForTimeout(5000);
 
-            await this._page.screenshot({ path: nameFile });
+            await this._page.screenshot({ path: `${nameFile}` });
 
             log('Print efetuada');
         } catch(e) {
