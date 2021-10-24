@@ -34,10 +34,10 @@ class Server {
                 
                 try {
                     try {
-                        await this.startBot(accounts[1].email, accounts[0].password);
+                        await this.startBot(accounts[1].email, accounts[1].password);
                     } catch(e) {
                         log('[2] Erro no bot tentando novamente');
-                        await this.startBot(accounts[1].email, accounts[0].password);
+                        await this.startBot(accounts[1].email, accounts[1].password);
                     }
                 } catch(e) {
                     log('[2] Erro no bot depois de duas tentavias');
