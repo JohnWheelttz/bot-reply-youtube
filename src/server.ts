@@ -10,6 +10,7 @@ import accounts from './accounts.json'
 require('dotenv').config();
 
 class Server {
+    private _bot = new Bot();
     private _moment: number = 0;
     private _last_id = process.env.LAST_VIDEO!;
     constructor() {
@@ -48,10 +49,9 @@ class Server {
     }
 
     private async startBot(email: string, password: string): Promise<void> {
-        const bot = new Bot();
-        await bot.start();
-        await bot.login(email, password);
-        await bot.spam(this._last_id, process.env.MSG!, 5000);
+        await this._bot.start();
+        await this._bot.login(email, password);
+        await this._bot.spam(this._last_id, process.env.MSG!, 5000);
     }
 
     start() {
