@@ -77,7 +77,7 @@ class Server {
                         log('Bot iniciado');
 
                         events.emit('bot');
-                    }, 900000);
+                    }, 300000);
                 } else {
                     log('Nenhum video novo encontrado');
                 }

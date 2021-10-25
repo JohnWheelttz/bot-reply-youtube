@@ -78,7 +78,7 @@ export default class Bot {
     
                             (c[index].querySelector('div#toolbar')!.querySelector('tp-yt-paper-button#button.style-scope.ytd-button-renderer.style-text.size-default[aria-label="Responder"]') as HTMLButtonElement).click();
         
-                            (c[index].querySelector('div#reply-dialog')!.querySelector('[aria-label="Adicione uma resposta pública..."]') as HTMLDivElement).innerText = `${res_com} ${index}`;
+                            (c[index].querySelector('div#reply-dialog')!.querySelector('[aria-label="Adicione uma resposta pública..."]') as HTMLDivElement).innerText = `${res_com} ${index} vezes`;
         
                             c[index].querySelector('div#reply-dialog')!.querySelector('[aria-label="Responder"]')!.parentElement!.parentElement!.removeAttribute('disabled');
     
