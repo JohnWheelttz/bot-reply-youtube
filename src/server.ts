@@ -71,9 +71,11 @@ class Server {
                     this._last_id = data.items[0].id.videoId;
         
                     log('Video novo!');
-                    log('Bot iniciado');
+                    log('Bot sera iniciado em 5 minutos');
 
-                    events.emit('bot');
+                    setTimeout(() => {
+                        events.emit('bot');
+                    }, 300000);
                 } else {
                     log('Nenhum video novo encontrado');
                 }
